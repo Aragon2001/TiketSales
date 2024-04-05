@@ -1,6 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class Login
+    Private _controlador As CLogin
 #Region "Customize Controls - Personalizar Controles"
 
     Private Sub CustomizeComponents()
@@ -59,5 +60,17 @@ Public Class Login
         CustomizeComponents()
     End Sub
 
+    Public Sub New(Controlador As CLogin)
 
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        _controlador = Controlador
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim username As String = txtUser.Text
+        Dim contraseña As String = txtPass.Text
+
+        _controlador.IniciarSesion(username, contraseña)
+    End Sub
 End Class

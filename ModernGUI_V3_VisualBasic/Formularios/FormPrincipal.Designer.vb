@@ -35,6 +35,8 @@ Partial Class FormPrincipal
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.lblUsuarioActivo = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
         Me.PanelContenedor.SuspendLayout()
         Me.PanelFormularios.SuspendLayout()
         CType(Me.LOGO, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +56,7 @@ Partial Class FormPrincipal
         Me.PanelContenedor.Controls.Add(Me.PanelBarraTitulo)
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedor.Location = New System.Drawing.Point(0, 0)
-        Me.PanelContenedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelContenedor.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelContenedor.Name = "PanelContenedor"
         Me.PanelContenedor.Size = New System.Drawing.Size(1021, 557)
         Me.PanelContenedor.TabIndex = 0
@@ -65,7 +67,7 @@ Partial Class FormPrincipal
         Me.PanelFormularios.Controls.Add(Me.LOGO)
         Me.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelFormularios.Location = New System.Drawing.Point(188, 32)
-        Me.PanelFormularios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelFormularios.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelFormularios.Name = "PanelFormularios"
         Me.PanelFormularios.Size = New System.Drawing.Size(833, 525)
         Me.PanelFormularios.TabIndex = 2
@@ -75,7 +77,7 @@ Partial Class FormPrincipal
         Me.LOGO.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LOGO.Image = CType(resources.GetObject("LOGO.Image"), System.Drawing.Image)
         Me.LOGO.Location = New System.Drawing.Point(0, 0)
-        Me.LOGO.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LOGO.Margin = New System.Windows.Forms.Padding(2)
         Me.LOGO.Name = "LOGO"
         Me.LOGO.Size = New System.Drawing.Size(833, 525)
         Me.LOGO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -85,12 +87,14 @@ Partial Class FormPrincipal
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.lblUser)
+        Me.PanelMenu.Controls.Add(Me.lblUsuarioActivo)
         Me.PanelMenu.Controls.Add(Me.Button3)
         Me.PanelMenu.Controls.Add(Me.Button2)
         Me.PanelMenu.Controls.Add(Me.Button1)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 32)
-        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(188, 525)
         Me.PanelMenu.TabIndex = 1
@@ -105,12 +109,12 @@ Partial Class FormPrincipal
         Me.Button3.ForeColor = System.Drawing.Color.Gainsboro
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 154)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Location = New System.Drawing.Point(2, 236)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(188, 32)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "Reportes"
         Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -124,8 +128,8 @@ Partial Class FormPrincipal
         Me.Button2.ForeColor = System.Drawing.Color.Gainsboro
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 116)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Location = New System.Drawing.Point(2, 198)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(188, 32)
         Me.Button2.TabIndex = 1
@@ -143,12 +147,12 @@ Partial Class FormPrincipal
         Me.Button1.ForeColor = System.Drawing.Color.Gainsboro
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 79)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Location = New System.Drawing.Point(2, 161)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(188, 32)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Venta"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -161,7 +165,7 @@ Partial Class FormPrincipal
         Me.PanelBarraTitulo.Controls.Add(Me.btnCerrar)
         Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
         Me.PanelBarraTitulo.Size = New System.Drawing.Size(1021, 32)
         Me.PanelBarraTitulo.TabIndex = 0
@@ -171,7 +175,7 @@ Partial Class FormPrincipal
         Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRestaurar.Image = CType(resources.GetObject("btnRestaurar.Image"), System.Drawing.Image)
         Me.btnRestaurar.Location = New System.Drawing.Point(974, 10)
-        Me.btnRestaurar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRestaurar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRestaurar.Name = "btnRestaurar"
         Me.btnRestaurar.Size = New System.Drawing.Size(16, 16)
         Me.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -184,7 +188,7 @@ Partial Class FormPrincipal
         Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
         Me.btnMinimizar.Location = New System.Drawing.Point(946, 10)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(16, 16)
         Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -196,7 +200,7 @@ Partial Class FormPrincipal
         Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMaximizar.Image = CType(resources.GetObject("btnMaximizar.Image"), System.Drawing.Image)
         Me.btnMaximizar.Location = New System.Drawing.Point(974, 10)
-        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnMaximizar.Name = "btnMaximizar"
         Me.btnMaximizar.Size = New System.Drawing.Size(16, 16)
         Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -208,12 +212,33 @@ Partial Class FormPrincipal
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.Image = CType(resources.GetObject("btnCerrar.Image"), System.Drawing.Image)
         Me.btnCerrar.Location = New System.Drawing.Point(1000, 10)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(16, 16)
         Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.TabStop = False
+        '
+        'lblUsuarioActivo
+        '
+        Me.lblUsuarioActivo.AutoSize = True
+        Me.lblUsuarioActivo.ForeColor = System.Drawing.Color.White
+        Me.lblUsuarioActivo.Location = New System.Drawing.Point(15, 53)
+        Me.lblUsuarioActivo.Name = "lblUsuarioActivo"
+        Me.lblUsuarioActivo.Size = New System.Drawing.Size(39, 13)
+        Me.lblUsuarioActivo.TabIndex = 3
+        Me.lblUsuarioActivo.Text = "Label1"
+        '
+        'lblUser
+        '
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.980198!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.ForeColor = System.Drawing.Color.White
+        Me.lblUser.Location = New System.Drawing.Point(15, 18)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(69, 17)
+        Me.lblUser.TabIndex = 4
+        Me.lblUser.Text = "Usuario:"
         '
         'FormPrincipal
         '
@@ -222,7 +247,7 @@ Partial Class FormPrincipal
         Me.ClientSize = New System.Drawing.Size(1021, 557)
         Me.Controls.Add(Me.PanelContenedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(412, 325)
         Me.Name = "FormPrincipal"
         Me.Text = "Form1"
@@ -230,6 +255,7 @@ Partial Class FormPrincipal
         Me.PanelFormularios.ResumeLayout(False)
         CType(Me.LOGO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
+        Me.PanelMenu.PerformLayout()
         Me.PanelBarraTitulo.ResumeLayout(False)
         Me.PanelBarraTitulo.PerformLayout()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -252,4 +278,6 @@ Partial Class FormPrincipal
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents LOGO As PictureBox
+    Friend WithEvents lblUsuarioActivo As Label
+    Friend WithEvents lblUser As Label
 End Class

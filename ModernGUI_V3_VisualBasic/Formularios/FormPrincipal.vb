@@ -114,7 +114,7 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        AbrirFormEnPanel(Of Form1)()
+        AbrirFormEnPanel(Of Venta)()
         Button1.BackColor = Color.FromArgb(12, 61, 92)
     End Sub
 
@@ -124,7 +124,7 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        AbrirFormEnPanel(Of Form3)()
+        AbrirFormEnPanel(Of Reporte)()
         Button3.BackColor = Color.FromArgb(12, 61, 92)
     End Sub
     'METODO/EVENTO AL CERRAR FORMS

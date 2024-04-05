@@ -92,9 +92,9 @@ Partial Class Login
         Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.Label1.Location = New System.Drawing.Point(33, 290)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 23)
+        Me.Label1.Size = New System.Drawing.Size(68, 23)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Username"
+        Me.Label1.Text = "Usuario"
         '
         'txtUser
         '
@@ -125,9 +125,9 @@ Partial Class Login
         Me.Label2.ForeColor = System.Drawing.Color.Silver
         Me.Label2.Location = New System.Drawing.Point(33, 350)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 23)
+        Me.Label2.Size = New System.Drawing.Size(97, 23)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Password"
+        Me.Label2.Text = "Contraseña"
         '
         'CheckBox1
         '
@@ -137,9 +137,9 @@ Partial Class Login
         Me.CheckBox1.ForeColor = System.Drawing.Color.Silver
         Me.CheckBox1.Location = New System.Drawing.Point(37, 410)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(123, 24)
+        Me.CheckBox1.Size = New System.Drawing.Size(106, 24)
         Me.CheckBox1.TabIndex = 6
-        Me.CheckBox1.Text = "Remember me"
+        Me.CheckBox1.Text = "Recordarme"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'btnLogin
@@ -153,7 +153,7 @@ Partial Class Login
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(350, 45)
         Me.btnLogin.TabIndex = 7
-        Me.btnLogin.Text = "Log In"
+        Me.btnLogin.Text = "Iniciar"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'Label3
@@ -163,9 +163,9 @@ Partial Class Login
         Me.Label3.ForeColor = System.Drawing.Color.DarkGray
         Me.Label3.Location = New System.Drawing.Point(144, 644)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(127, 20)
+        Me.Label3.Size = New System.Drawing.Size(151, 20)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Forgot password?"
+        Me.Label3.Text = "Olvide mi Contraseña"
         '
         'Panel1
         '
