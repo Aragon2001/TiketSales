@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{943B3651-DA9E-4220-B57B-12F396E70CBC}</ProjectGuid>
+    <ProjectGuid>{E841A4EE-C3D2-40D4-A366-C7AF42EE21E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>TiketSales.My.MyApplication</StartupObject>
-    <RootNamespace>TiketSales</RootNamespace>
-    <AssemblyName>TiketSales</AssemblyName>
+    <StartupObject>WindowsApp1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApp1</RootNamespace>
+    <AssemblyName>WindowsApp1</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>TiketSales.xml</DocumentationFile>
+    <DocumentationFile>WindowsApp1.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>TiketSales.xml</DocumentationFile>
+    <DocumentationFile>WindowsApp1.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -73,11 +73,34 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FormPrincipal.Designer.vb">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormPrincipal.vb" />
+    <Compile Include="Formularios\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login.vb" />
+    <Compile Include="Formularios\NuevoAvion.Designer.vb">
+      <DependentUpon>NuevoAvion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NuevoAvion.vb" />
+    <Compile Include="Formularios\Reporte.Designer.vb">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reporte.vb" />
+    <Compile Include="Formularios\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuarios.vb" />
+    <Compile Include="Formularios\Ventanilla.Designer.vb">
+      <DependentUpon>Ventanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventanilla.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -91,6 +114,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevoAvion.resx">
+      <DependentUpon>NuevoAvion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reporte.resx">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventanilla.resx">
+      <DependentUpon>Ventanilla.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -111,21 +152,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.vbproj">
       <Project>{86bc35d2-7dc6-4b32-974b-4d414687eabd}</Project>
       <Name>Domain</Name>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo Aerolineas\61586b0b258f1e000415490d.png" />
+    <Content Include="Logo Aerolineas\British-Airways-Logo.png" />
+    <Content Include="Logo Aerolineas\Emirates-Logo.png" />
+    <Content Include="Logo Aerolineas\THUMB-aa_aa__ahz_4cp_grd_pos-%281%29.png" />
+    <Content Include="Resources\avion-de-linea.png" />
+    <Content Include="Resources\avion.png" />
+    <Content Include="Resources\nube-ap.jpg" />
+    <Content Include="Resources\procesamiento-de-datos.png" />
+    <Content Include="Resources\taquilla.png" />
+    <Content Include="Resources\todo-sobre-las-nubes.png" />
+    <Content Include="Resources\turista.png" />
+    <Content Include="Resources\WhatsApp Image 2023-07-26 at 15.52.43.jpeg" />
+    <Content Include="Resources\WhatsApp_Image_2023-07-26_at_15.52.43-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
