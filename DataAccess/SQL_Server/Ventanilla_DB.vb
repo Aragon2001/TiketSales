@@ -29,6 +29,7 @@ Public Class Ventanilla_DB
                         ActiveUser.identificacion = reader.GetInt32(reader.GetOrdinal("identificacion"))
                         ActiveUser.email = reader.GetString(reader.GetOrdinal("email"))
                         ActiveUser.tipo = reader.GetBoolean(reader.GetOrdinal("tipo"))
+                        'dd
                     End While
                     reader.Dispose()
                     Return True
