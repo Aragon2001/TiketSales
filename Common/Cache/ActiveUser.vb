@@ -6,6 +6,8 @@ Public Module ActiveUser
     Public identificacion
     Public email
     Public tipo
+    Public pass
+    Public lineaaerea
 End Module
 
 

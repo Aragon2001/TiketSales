@@ -636,7 +636,7 @@ Partial Class Ventanilla
         AutoScaleMode = AutoScaleMode.Font
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         BackColor = Color.Lavender
-        ClientSize = New Size(1178, 876)
+        ClientSize = New Size(1138, 736)
         Controls.Add(GroupBox1)
         Controls.Add(GroupBoxOrigen)
         Controls.Add(GroupBoxPasajero)

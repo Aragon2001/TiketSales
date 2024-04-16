@@ -175,5 +175,12 @@ Public Class FormPrincipal
             Me.Close()
         End If
     End Sub
+
+    Private Sub linkEditarPerfil_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkEditarPerfil.LinkClicked
+
+        AbrirFormEnPanel(Of Usuarios)()
+
+
+    End Sub
 End Class
 '#3D73FF

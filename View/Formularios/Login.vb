@@ -17,8 +17,8 @@ Public Class Login
     End Sub
 
     Private Sub btnLogin_Paint(sender As Object, e As PaintEventArgs) Handles btnLogin.Paint
-        Dim buttonPath As Drawing2D.GraphicsPath = New Drawing2D.GraphicsPath()
-        Dim myRectangle As Rectangle = btnLogin.ClientRectangle
+        Dim buttonPath = New Drawing2D.GraphicsPath
+        Dim myRectangle = btnLogin.ClientRectangle
         myRectangle.Inflate(0, 30)
         buttonPath.AddEllipse(myRectangle)
         btnLogin.Region = New Region(buttonPath)
@@ -71,6 +71,7 @@ Public Class Login
 
     Private Sub txtUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUser.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
+
             txtPass.Focus()
         End If
     End Sub
