@@ -28,6 +28,7 @@ Partial Class FormPrincipal
         LOGO = New PictureBox()
         PanelMenu = New Panel()
         Panel1 = New Panel()
+        linkEditarPerfil = New LinkLabel()
         lblemail = New Label()
         lblIdentificacion = New Label()
         PictureBox1 = New PictureBox()
@@ -45,7 +46,6 @@ Partial Class FormPrincipal
         btnMinimizar = New PictureBox()
         btnMaximizar = New PictureBox()
         btnCerrar = New PictureBox()
-        linkEditarPerfil = New LinkLabel()
         PanelContenedor.SuspendLayout()
         PanelFormularios.SuspendLayout()
         CType(LOGO, ComponentModel.ISupportInitialize).BeginInit()
@@ -124,6 +124,17 @@ Partial Class FormPrincipal
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(227, 122)
         Panel1.TabIndex = 11
+        ' 
+        ' linkEditarPerfil
+        ' 
+        linkEditarPerfil.AutoSize = True
+        linkEditarPerfil.LinkColor = Color.Gainsboro
+        linkEditarPerfil.Location = New Point(3, 107)
+        linkEditarPerfil.Name = "linkEditarPerfil"
+        linkEditarPerfil.Size = New Size(84, 15)
+        linkEditarPerfil.TabIndex = 7
+        linkEditarPerfil.TabStop = True
+        linkEditarPerfil.Text = "Editar mi perfil"
         ' 
         ' lblemail
         ' 
@@ -376,17 +387,6 @@ Partial Class FormPrincipal
         btnCerrar.SizeMode = PictureBoxSizeMode.AutoSize
         btnCerrar.TabIndex = 0
         btnCerrar.TabStop = False
-        ' 
-        ' linkEditarPerfil
-        ' 
-        linkEditarPerfil.AutoSize = True
-        linkEditarPerfil.LinkColor = Color.Gainsboro
-        linkEditarPerfil.Location = New Point(3, 107)
-        linkEditarPerfil.Name = "linkEditarPerfil"
-        linkEditarPerfil.Size = New Size(84, 15)
-        linkEditarPerfil.TabIndex = 7
-        linkEditarPerfil.TabStop = True
-        linkEditarPerfil.Text = "Editar mi perfil"
         ' 
         ' FormPrincipal
         ' 

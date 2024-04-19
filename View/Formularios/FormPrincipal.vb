@@ -151,13 +151,13 @@ Public Class FormPrincipal
         End If
     End Sub
 
-    Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Me.StartPosition = FormStartPosition.CenterScreen
-        Me.WindowState = FormWindowState.Maximized
-        lblUsuarioActivo.Text = ActiveUser.nombre
-        lblIdentificacion.Text = ActiveUser.identificacion
-        lblemail.Text = ActiveUser.email
-        If ActiveUser.tipo = 0 Then
+    Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        StartPosition = FormStartPosition.CenterScreen
+        WindowState = FormWindowState.Maximized
+        lblUsuarioActivo.Text = nombre
+        lblIdentificacion.Text = identificacion
+        lblemail.Text = email
+        If tipo = 0 Then
             lblUser.Text = lblUser.Text + " Admin"
 
         Else
@@ -177,10 +177,12 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub linkEditarPerfil_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkEditarPerfil.LinkClicked
-
         AbrirFormEnPanel(Of Usuarios)()
+    End Sub
 
-
+    Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click
+        AbrirFormEnPanel(Of NuevoAvion)()
+        btnAddPlane.BackColor = Color.FromArgb(61, 118, 194)
     End Sub
 End Class
 '#3D73FF
