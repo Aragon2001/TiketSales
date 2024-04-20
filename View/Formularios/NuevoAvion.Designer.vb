@@ -27,6 +27,7 @@ Partial Class NuevoAvion
         Label6 = New Label()
         Button2 = New Button()
         GroupBox1 = New GroupBox()
+        Label1 = New Label()
         TextBoxlinea = New ComboBox()
         Button1 = New Button()
         TextBoxmarca = New TextBox()
@@ -36,6 +37,7 @@ Partial Class NuevoAvion
         Label4 = New Label()
         TextBoxnombre_piloto = New TextBox()
         Label5 = New Label()
+        TextBoxCiudadOrigen = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -62,6 +64,8 @@ Partial Class NuevoAvion
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(TextBoxCiudadOrigen)
+        GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(TextBoxlinea)
         GroupBox1.Controls.Add(Button1)
         GroupBox1.Controls.Add(TextBoxmarca)
@@ -78,6 +82,17 @@ Partial Class NuevoAvion
         GroupBox1.Size = New Size(1298, 350)
         GroupBox1.TabIndex = 16
         GroupBox1.TabStop = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(694, 176)
+        Label1.Margin = New Padding(5, 0, 5, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(181, 16)
+        Label1.TabIndex = 12
+        Label1.Text = "Ingrese la ciudad de origen :"
         ' 
         ' TextBoxlinea
         ' 
@@ -114,9 +129,9 @@ Partial Class NuevoAvion
         Label2.Location = New Point(24, 45)
         Label2.Margin = New Padding(5, 0, 5, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(138, 16)
+        Label2.Size = New Size(145, 16)
         Label2.TabIndex = 1
-        Label2.Text = "Ingrese la linea Aera:"
+        Label2.Text = "Ingrese la linea Aerea:"
         ' 
         ' Label3
         ' 
@@ -169,6 +184,13 @@ Partial Class NuevoAvion
         Label5.TabIndex = 4
         Label5.Text = "Ingrese la marca del avion:"
         ' 
+        ' TextBoxCiudadOrigen
+        ' 
+        TextBoxCiudadOrigen.Location = New Point(957, 181)
+        TextBoxCiudadOrigen.Name = "TextBoxCiudadOrigen"
+        TextBoxCiudadOrigen.Size = New Size(317, 23)
+        TextBoxCiudadOrigen.TabIndex = 13
+        ' 
         ' NuevoAvion
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
@@ -188,6 +210,7 @@ Partial Class NuevoAvion
     End Sub
 
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBoxlinea As ComboBox
@@ -199,10 +222,11 @@ Partial Class NuevoAvion
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxnombre_piloto As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents TextBoxCiudadOrigen As TextBox
 
     'Boton para guardar los datos ingresados
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim nuevoAvionDataAccess As New NuevoAvionDataAccess()
-        nuevoAvionDataAccess.InsertarNuevoAvion(TextBoxmarca.Text, TextBoxlinea.SelectedIndex + 1, Convert.ToInt32(TextBoxcapacidad.Text), TextBoxnombre_piloto.Text)
+        nuevoAvionDataAccess.InsertarNuevoAvion(TextBoxmarca.Text, TextBoxlinea.SelectedIndex + 1, Convert.ToInt32(TextBoxcapacidad.Text), TextBoxnombre_piloto.Text, TextBoxCiudadOrigen.Text)
     End Sub
 End Class
