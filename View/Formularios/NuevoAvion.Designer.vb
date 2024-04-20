@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports DataAccess
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NuevoAvion
     Inherits System.Windows.Forms.Form
 
@@ -22,168 +24,193 @@ Partial Class NuevoAvion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBoxlinea = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBoxmarca = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBoxcapacidad = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBoxnombre_piloto = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Georgia", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(13, 34)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(272, 24)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "Registro para un nuevo avion"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1030, 24)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 34)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Regresar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBoxlinea)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBoxmarca)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBoxcapacidad)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBoxnombre_piloto)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Location = New System.Drawing.Point(17, 85)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(1113, 303)
-        Me.GroupBox1.TabIndex = 16
-        Me.GroupBox1.TabStop = False
-        '
-        'TextBoxlinea
-        '
-        Me.TextBoxlinea.FormattingEnabled = True
-        Me.TextBoxlinea.Items.AddRange(New Object() {"American Airlines", "British Airways", "Emirates", "Delta Air Lines"})
-        Me.TextBoxlinea.Location = New System.Drawing.Point(255, 35)
-        Me.TextBoxlinea.Name = "TextBoxlinea"
-        Me.TextBoxlinea.Size = New System.Drawing.Size(249, 21)
-        Me.TextBoxlinea.TabIndex = 11
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(24, 183)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 34)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBoxmarca
-        '
-        Me.TextBoxmarca.Location = New System.Drawing.Point(819, 39)
-        Me.TextBoxmarca.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBoxmarca.Name = "TextBoxmarca"
-        Me.TextBoxmarca.Size = New System.Drawing.Size(274, 20)
-        Me.TextBoxmarca.TabIndex = 9
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(21, 39)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Ingrese la linea Aera:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(21, 95)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(187, 17)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Ingrese el nombre del piloto:"
-        '
-        'TextBoxcapacidad
-        '
-        Me.TextBoxcapacidad.Location = New System.Drawing.Point(819, 91)
-        Me.TextBoxcapacidad.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBoxcapacidad.Name = "TextBoxcapacidad"
-        Me.TextBoxcapacidad.ReadOnly = True
-        Me.TextBoxcapacidad.Size = New System.Drawing.Size(274, 20)
-        Me.TextBoxcapacidad.TabIndex = 7
-        Me.TextBoxcapacidad.Text = "200"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(595, 95)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(199, 17)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Ingrese la capacidad del avion:"
-        '
-        'TextBoxnombre_piloto
-        '
-        Me.TextBoxnombre_piloto.Location = New System.Drawing.Point(255, 91)
-        Me.TextBoxnombre_piloto.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBoxnombre_piloto.Name = "TextBoxnombre_piloto"
-        Me.TextBoxnombre_piloto.Size = New System.Drawing.Size(249, 20)
-        Me.TextBoxnombre_piloto.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(595, 39)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(175, 17)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Ingrese la marca del avion:"
-        '
-        'NuevoAvion
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1201, 569)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "NuevoAvion"
-        Me.Text = "NuevoAvion"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Label6 = New Label()
+        Button2 = New Button()
+        GroupBox1 = New GroupBox()
+        Label1 = New Label()
+        TextBoxlinea = New ComboBox()
+        Button1 = New Button()
+        TextBoxmarca = New TextBox()
+        Label2 = New Label()
+        Label3 = New Label()
+        TextBoxcapacidad = New TextBox()
+        Label4 = New Label()
+        TextBoxnombre_piloto = New TextBox()
+        Label5 = New Label()
+        TextBoxCiudadOrigen = New TextBox()
+        GroupBox1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(15, 39)
+        Label6.Margin = New Padding(5, 0, 5, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(258, 23)
+        Label6.TabIndex = 18
+        Label6.Text = "Registro para un nuevo avion"
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(1202, 28)
+        Button2.Margin = New Padding(5)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(117, 39)
+        Button2.TabIndex = 17
+        Button2.Text = "Regresar"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(TextBoxCiudadOrigen)
+        GroupBox1.Controls.Add(Label1)
+        GroupBox1.Controls.Add(TextBoxlinea)
+        GroupBox1.Controls.Add(Button1)
+        GroupBox1.Controls.Add(TextBoxmarca)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Controls.Add(TextBoxcapacidad)
+        GroupBox1.Controls.Add(Label4)
+        GroupBox1.Controls.Add(TextBoxnombre_piloto)
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Location = New Point(20, 98)
+        GroupBox1.Margin = New Padding(5)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Padding = New Padding(5)
+        GroupBox1.Size = New Size(1298, 350)
+        GroupBox1.TabIndex = 16
+        GroupBox1.TabStop = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(694, 176)
+        Label1.Margin = New Padding(5, 0, 5, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(181, 16)
+        Label1.TabIndex = 12
+        Label1.Text = "Ingrese la ciudad de origen :"
+        ' 
+        ' TextBoxlinea
+        ' 
+        TextBoxlinea.FormattingEnabled = True
+        TextBoxlinea.Items.AddRange(New Object() {"American Airlines", "British Airways", "Emirates", "Delta Air Lines"})
+        TextBoxlinea.Location = New Point(298, 40)
+        TextBoxlinea.Margin = New Padding(4, 3, 4, 3)
+        TextBoxlinea.Name = "TextBoxlinea"
+        TextBoxlinea.Size = New Size(290, 23)
+        TextBoxlinea.TabIndex = 11
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(28, 211)
+        Button1.Margin = New Padding(5)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(167, 39)
+        Button1.TabIndex = 10
+        Button1.Text = "Guardar"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' TextBoxmarca
+        ' 
+        TextBoxmarca.Location = New Point(955, 45)
+        TextBoxmarca.Margin = New Padding(5)
+        TextBoxmarca.Name = "TextBoxmarca"
+        TextBoxmarca.Size = New Size(319, 23)
+        TextBoxmarca.TabIndex = 9
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(24, 45)
+        Label2.Margin = New Padding(5, 0, 5, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(145, 16)
+        Label2.TabIndex = 1
+        Label2.Text = "Ingrese la linea Aerea:"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(24, 110)
+        Label3.Margin = New Padding(5, 0, 5, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(186, 16)
+        Label3.TabIndex = 2
+        Label3.Text = "Ingrese el nombre del piloto:"
+        ' 
+        ' TextBoxcapacidad
+        ' 
+        TextBoxcapacidad.Location = New Point(955, 105)
+        TextBoxcapacidad.Margin = New Padding(5)
+        TextBoxcapacidad.Name = "TextBoxcapacidad"
+        TextBoxcapacidad.ReadOnly = True
+        TextBoxcapacidad.Size = New Size(319, 23)
+        TextBoxcapacidad.TabIndex = 7
+        TextBoxcapacidad.Text = "200"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(694, 110)
+        Label4.Margin = New Padding(5, 0, 5, 0)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(198, 16)
+        Label4.TabIndex = 3
+        Label4.Text = "Ingrese la capacidad del avion:"
+        ' 
+        ' TextBoxnombre_piloto
+        ' 
+        TextBoxnombre_piloto.Location = New Point(298, 105)
+        TextBoxnombre_piloto.Margin = New Padding(5)
+        TextBoxnombre_piloto.Name = "TextBoxnombre_piloto"
+        TextBoxnombre_piloto.Size = New Size(290, 23)
+        TextBoxnombre_piloto.TabIndex = 6
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(694, 45)
+        Label5.Margin = New Padding(5, 0, 5, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(174, 16)
+        Label5.TabIndex = 4
+        Label5.Text = "Ingrese la marca del avion:"
+        ' 
+        ' TextBoxCiudadOrigen
+        ' 
+        TextBoxCiudadOrigen.Location = New Point(957, 181)
+        TextBoxCiudadOrigen.Name = "TextBoxCiudadOrigen"
+        TextBoxCiudadOrigen.Size = New Size(317, 23)
+        TextBoxCiudadOrigen.TabIndex = 13
+        ' 
+        ' NuevoAvion
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1401, 657)
+        Controls.Add(Label6)
+        Controls.Add(Button2)
+        Controls.Add(GroupBox1)
+        Margin = New Padding(4, 3, 4, 3)
+        Name = "NuevoAvion"
+        Text = "NuevoAvion"
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBoxlinea As ComboBox
@@ -195,4 +222,11 @@ Partial Class NuevoAvion
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxnombre_piloto As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents TextBoxCiudadOrigen As TextBox
+
+    'Boton para guardar los datos ingresados
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim nuevoAvionDataAccess As New NuevoAvionDataAccess()
+        nuevoAvionDataAccess.InsertarNuevoAvion(TextBoxmarca.Text, TextBoxlinea.SelectedIndex + 1, Convert.ToInt32(TextBoxcapacidad.Text), TextBoxnombre_piloto.Text, TextBoxCiudadOrigen.Text)
+    End Sub
 End Class
