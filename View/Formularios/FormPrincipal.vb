@@ -177,7 +177,14 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub linkEditarPerfil_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkEditarPerfil.LinkClicked
+
         AbrirFormEnPanel(Of Usuarios)()
+
+
+    End Sub
+
+    Private Sub btnAddVuelo_Click(sender As Object, e As EventArgs) Handles btnAddVuelo.Click
+
     End Sub
 
     Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click

@@ -4,7 +4,7 @@ Public MustInherit Class Conexion_DB ' Define una clase abstracta llamada Conexi
     Private Connect As String ' Declara una variable privada para almacenar la cadena de conexión
 
     Protected Sub New() ' Constructor de la clase
-        Connect = ("Data Source=DESKTOP-T8C8ADQ\SQLEXPRESS;Initial Catalog=vuelos;Integrated Security=true") ' Asigna la cadena de conexión
+        Connect = "Data Source=DESKTOP-T8C8ADQ\SQLEXPRESS;Initial Catalog=vuelos;Integrated Security=true" ' Asigna la cadena de conexión
     End Sub
 
     ' Función para abrir la conexión a la base de datos
