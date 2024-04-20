@@ -56,12 +56,12 @@ CREATE TABLE Empleado (
     ID_empleado INT PRIMARY KEY IDENTITY(1,1),
     ID_persona INT NOT NULL,
     Linea_aerea NVARCHAR(100) NOT NULL,
-    Contraseña NVARCHAR(100) NOT NULL,
+    ContraseÃ±a NVARCHAR(100) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     tipo INT NOT NULL, -- 0 admin, 1 vendedor
-    Identificacion INT NOT NULL, -- Clave foránea
+    Identificacion INT NOT NULL, -- Clave forÃ¡nea
     FOREIGN KEY (ID_persona) REFERENCES Persona(ID_persona),
-    FOREIGN KEY (Identificacion) REFERENCES Persona(Num_identificacion) -- Clave foránea
+    FOREIGN KEY (Identificacion) REFERENCES Persona(Num_identificacion) -- Clave forÃ¡nea
 );
 GO
 
@@ -76,9 +76,9 @@ CREATE TABLE Pasajero (
     Presente BIT NOT NULL,
     ID_persona INT NOT NULL,
     Nacionalidad NVARCHAR(50) NOT NULL,
-    pasaporte INT NOT NULL, -- Clave foránea
+    pasaporte INT NOT NULL, -- Clave forÃ¡nea
     FOREIGN KEY (ID_persona) REFERENCES Persona(ID_persona),
-    FOREIGN KEY (pasaporte) REFERENCES Persona(Num_identificacion) -- Clave foránea
+    FOREIGN KEY (pasaporte) REFERENCES Persona(Num_identificacion) -- Clave forÃ¡nea
 );
 GO
 
@@ -127,14 +127,14 @@ INSERT INTO Aerolineas (Nombre, Pais_origen) VALUES
     ('American Airlines', 'Estados Unidos'),
     ('British Airways', 'Reino Unido'),
     ('Lufthansa', 'Alemania'),
-    ('Emirates', 'Emiratos Árabes Unidos');
+    ('Emirates', 'Emiratos Ãrabes Unidos');
     
 -- Insertar datos en la tabla Avion
 INSERT INTO Avion (Marca_avion, ID_aerolinea, Capacidad, Nombre_piloto, Ciudad_origen, Ciudad_destino, Hora_salida, Hora_llegada, Escala, Ciudades_escala) VALUES
     ('Boeing 777', 1, 300, 'John Smith', 'Nueva York', 'Londres', '2024-04-15 08:00:00', '2024-04-15 15:00:00', 0, NULL),
     ('Airbus A380', 2, 500, 'Emma Johnson', 'Londres', 'Nueva York', '2024-04-15 10:00:00', '2024-04-15 18:00:00', 0, NULL),
-    ('Boeing 737', 3, 150, 'Michael Brown', 'Fráncfort', 'Dubái', '2024-04-16 09:00:00', '2024-04-16 15:00:00', 1, 'Estambul'),
-    ('Airbus A320', 4, 200, 'Sophia Wilson', 'Dubái', 'Fráncfort', '2024-04-16 11:00:00', '2024-04-16 17:00:00', 0, NULL);
+    ('Boeing 737', 3, 150, 'Michael Brown', 'FrÃ¡ncfort', 'DubÃ¡i', '2024-04-16 09:00:00', '2024-04-16 15:00:00', 1, 'Estambul'),
+    ('Airbus A320', 4, 200, 'Sophia Wilson', 'DubÃ¡i', 'FrÃ¡ncfort', '2024-04-16 11:00:00', '2024-04-16 17:00:00', 0, NULL);
 
 -- Insertar datos en la tabla Asiento
 INSERT INTO Asiento (Num_asiento, ID_avion, Estado) VALUES
@@ -163,14 +163,14 @@ INSERT INTO Persona (Nombre, Num_identificacion, tipo, Apellido1, Apellido2) VAL
     ('Sophia', 456789012, 1, 'Wilson', 'Martinez');
 
 -- Insertar datos en la tabla Empleado
-INSERT INTO Empleado (ID_persona, Linea_aerea, Contraseña, Email, tipo, Identificacion) VALUES
+INSERT INTO Empleado (ID_persona, Linea_aerea, ContraseÃ±a, Email, tipo, Identificacion) VALUES
     (1, 'American Airlines', '1234', 'john.doe@example.com', 0, 123456789),
     (3, 'Lufthansa', '1234', 'michael.williams@example.com', 1, 345678901);
 
 -- Insertar datos en la tabla Pasajero
 INSERT INTO Pasajero (Destino, Num_tiquete, Precio_tiquete, Hora_atencion, Fecha_salida, Presente, ID_persona, Nacionalidad, pasaporte) VALUES
     ('Londres', 'AA1234', 500.00, '2024-04-15 07:30:00', '2024-04-15', 1, 2, 'Estadounidense', 234567890),
-    ('Nueva York', 'LH5678', 600.00, '2024-04-16 08:00:00', '2024-04-16', 1, 4, 'Británica', 456789012);
+    ('Nueva York', 'LH5678', 600.00, '2024-04-16 08:00:00', '2024-04-16', 1, 4, 'BritÃ¡nica', 456789012);
 
 -- Insertar datos en la tabla Venta
 INSERT INTO Venta (ID_pasajero, ID_avion, Hora_venta, Monto_total) VALUES
@@ -188,3 +188,5 @@ INSERT INTO Vuelos (ID_avion, ID_aerolinea, Destino, Hora_salida, Hora_llegada, 
     (2, 2, 'Nueva York', '2024-04-16 10:00:00', '2024-04-16 18:00:00', 600.00);
 
 
+----------- modificaciones el 20/04/24
+ALTER TABLE Pasajero DROP COLUMN precio_tiquete;
