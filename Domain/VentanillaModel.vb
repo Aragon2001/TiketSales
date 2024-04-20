@@ -113,47 +113,41 @@ Public Class VentanillaModel
     End Property
 
 
+
+
+
+
     Public Function ConfirmarVentanilla(NumeroVentanilla As Integer, Nombre_empleado As String, Cedula_Empleado As Integer, Hora_Apertura As String, Linea_aerea As String, Fecha As String) As String
-        Try
+            Try
             ' Confirma la ventanilla
             Ventanilla_DB.GuardarVentanilla(NumeroVentanilla, Nombre_empleado, Cedula_Empleado, Hora_Apertura, Linea_aerea, Fecha)
-
             Return "Ventanilla Abierta"
-        Catch ex As Exception
-            Return "Error al abrir: " & ex.Message
-        End Try
-    End Function
+            Catch ex As Exception
+                Return "Error al abrir: " & ex.Message
+            End Try
+        End Function
 
-    Public Function GuardarVenta(ID_pasajero As Integer, ID_avion As Integer, Hora_venta As DateTime, Monto_total As Decimal) As String
+    Public Function GuardarVenta(ID_pasajero As Integer, ID_avion As Integer, Hora_venta As DateTime, Monto_total As Decimal, Num_identificacion As Integer, ID_vuelo As Integer) As String
         Try
-
-            Ventanilla_DB.GuardarVenta(ID_pasajero, ID_avion, Hora_venta, Monto_total)
-
-
+            Ventanilla_DB.GuardarVenta(ID_pasajero, ID_avion, Hora_venta, Monto_total, Num_identificacion, ID_vuelo)
+            Return ""
         Catch ex As Exception
-            ' Si ocurre un error, puedes retornar un mensaje de error que incluya la descripción de la excepción
             Return "Error al guardar la venta: " & ex.Message
         End Try
     End Function
 
-    Public Function GuardarPasajero(Nombre As String, Apellido1 As String, apellido2 As String, Nacionalidad As String, Pasaporte As Integer, Destino As String, HoraAtencion As DateTime) As String
-        Try
-
-
-            Ventanilla_DB.GuardarPasajero(Nombre, Apellido1, apellido2, Nacionalidad, Pasaporte, Destino, HoraAtencion)
-
-
-
-            ' Si la operación de guardado es exitosa, puedes retornar una cadena vacía
+    Public Function GuardarPasajero(Nombre As String, Num_identificacion As Integer, Apellido1 As String, Apellido2 As String, Destino As String, Precio_tiquete As Decimal, Hora_atencion As DateTime, Fecha_salida As DateTime, Nacionalidad As String) As String
+            Try
+            Ventanilla_DB.GuardarPasajero(Nombre, Num_identificacion, Apellido1, Apellido2, Destino, Precio_tiquete, Hora_atencion, Fecha_salida, Nacionalidad)
             Return ""
-        Catch ex As Exception
-            ' Si ocurre un error, puedes retornar un mensaje de error que incluya la descripción de la excepción
-            Return "Error al guardar el pasajero: " & ex.Message
-        End Try
-    End Function
+            Catch ex As Exception
+                Return "Error al guardar el pasajero: " & ex.Message
+            End Try
+        End Function
 
 
 
-End Class
+
+    End Class
 
 
