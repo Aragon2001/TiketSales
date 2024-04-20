@@ -188,7 +188,7 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click
-        AbrirFormEnPanel(Of NuevoAvion)()
+        AbrirFormEnPanel(Of AgregarAvion)()
         btnAddPlane.BackColor = Color.FromArgb(61, 118, 194)
     End Sub
 End Class
