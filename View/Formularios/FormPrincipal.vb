@@ -177,19 +177,15 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub linkEditarPerfil_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkEditarPerfil.LinkClicked
-
         AbrirFormEnPanel(Of Usuarios)()
-
-
     End Sub
 
     Private Sub btnAddVuelo_Click(sender As Object, e As EventArgs) Handles btnAddVuelo.Click
-
+        AbrirFormEnPanel(Of AgregarVuelo)()
     End Sub
 
     Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click
         AbrirFormEnPanel(Of AgregarAvion)()
-        btnAddPlane.BackColor = Color.FromArgb(61, 118, 194)
     End Sub
 End Class
 '#3D73FF

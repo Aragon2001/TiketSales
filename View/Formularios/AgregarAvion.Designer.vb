@@ -271,9 +271,9 @@ Partial Class AgregarAvion
         Label2.Location = New Point(26, 47)
         Label2.Margin = New Padding(5, 0, 5, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(138, 16)
+        Label2.Size = New Size(145, 16)
         Label2.TabIndex = 1
-        Label2.Text = "Ingrese la linea Aera:"
+        Label2.Text = "Ingrese la linea Aerea:"
         ' 
         ' Label3
         ' 
@@ -330,7 +330,7 @@ Partial Class AgregarAvion
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1345, 677)
+        ClientSize = New Size(1345, 468)
         Controls.Add(Label6)
         Controls.Add(Button2)
         Controls.Add(GroupBox1)
