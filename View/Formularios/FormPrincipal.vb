@@ -182,5 +182,17 @@ Public Class FormPrincipal
 
 
     End Sub
+
+    Private Sub btnAddAerolinea_Click(sender As Object, e As EventArgs) Handles btnAddAerolinea.Click
+        AbrirFormEnPanel(Of NuevaAerolinea)()
+    End Sub
+
+    Private Sub btnAddVuelo_Click(sender As Object, e As EventArgs) Handles btnAddVuelo.Click
+        AbrirFormEnPanel(Of AgregarVuelo)()
+    End Sub
+
+    Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click
+        AbrirFormEnPanel(Of AgregarAvion)()
+    End Sub
 End Class
 '#3D73FF

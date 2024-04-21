@@ -7,7 +7,6 @@ Public Class Aerolinea
 End Class
 Public Class AerolineaDataAccess
     Inherits Conexion_DB ' Suponiendo que Conexion_DB es una clase que maneja la conexión a la base de datos
-
     ' Método para obtener las líneas aéreas desde la base de datos
     Public Function ObtenerLineasAereas() As List(Of Aerolinea)
         Dim lineasAereas As New List(Of Aerolinea)()
@@ -32,5 +31,21 @@ Public Class AerolineaDataAccess
 
         Return lineasAereas
     End Function
-End Class
 
+    Public Sub InsertarNuevaAerolinea(nombreAerolinea As String, paisOrigen As String)
+        Using connection = GetConecction()
+            connection.Open()
+
+            Dim query As String = "INSERT INTO Aerolineas (Nombre, Pais_origen) VALUES (@NombreAerolinea, @PaisOrigen)"
+
+            Using command As New SqlCommand(query, connection)
+                ' Parámetros de la consulta SQL
+                command.Parameters.AddWithValue("@NombreAerolinea", nombreAerolinea)
+                command.Parameters.AddWithValue("@PaisOrigen", paisOrigen)
+
+                ' Ejecutar la consulta SQL
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+End Class

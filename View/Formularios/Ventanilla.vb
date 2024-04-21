@@ -151,14 +151,14 @@ Public Class Ventanilla
                                Hora_Apertura:=VentanillaAbierta.Hora_Apertura,
                                Linea_aerea:=VentanillaAbierta.Linea_aerea,
                                Fecha:=VentanillaAbierta.fecha)
-        VM.GuardarPasajero(Nombre:=TextBoxNombrePasajero.Text,
-                           Num_identificacion:=TextBoxNumeroDePasaporte.Text,
-                           Apellido1:=txtapellido1.Text,
-                           Apellido2:=txtApellido2,
-                           Destino:=ComboBoxDestino.SelectedItem,
-                           Hora_atencion:=h, Fecha_salida, Nacionalidad)
+        'VM.GuardarPasajero(Nombre:=TextBoxNombrePasajero.Text,
+        '                   Num_identificacion:=TextBoxNumeroDePasaporte.Text,
+        '                   Apellido1:=txtapellido1.Text,
+        '                   Apellido2:=txtApellido2,
+        '                   Destino:=ComboBoxDestino.SelectedItem,
+        '                   Hora_atencion:=h, Fecha_salida, Nacionalidad)
 
-        VM.GuardarVenta(ID_pasajero, ID_avion, Hora_venta, Monto_total, Num_identificacion, ID_vuelo)
+        'VM.GuardarVenta(ID_pasajero, ID_avion, Hora_venta, Monto_total, Num_identificacion, ID_vuelo)
 
     End Sub
 End Class

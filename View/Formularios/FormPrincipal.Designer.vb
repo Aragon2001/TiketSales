@@ -27,7 +27,9 @@ Partial Class FormPrincipal
         PanelFormularios = New Panel()
         LOGO = New PictureBox()
         PanelMenu = New Panel()
+        btnAddAerolinea = New Button()
         Panel1 = New Panel()
+        linkEditarPerfil = New LinkLabel()
         lblemail = New Label()
         lblIdentificacion = New Label()
         PictureBox1 = New PictureBox()
@@ -45,7 +47,6 @@ Partial Class FormPrincipal
         btnMinimizar = New PictureBox()
         btnMaximizar = New PictureBox()
         btnCerrar = New PictureBox()
-        linkEditarPerfil = New LinkLabel()
         PanelContenedor.SuspendLayout()
         PanelFormularios.SuspendLayout()
         CType(LOGO, ComponentModel.ISupportInitialize).BeginInit()
@@ -98,6 +99,7 @@ Partial Class FormPrincipal
         ' PanelMenu
         ' 
         PanelMenu.BackColor = Color.FromArgb(CByte(4), CByte(41), CByte(68))
+        PanelMenu.Controls.Add(btnAddAerolinea)
         PanelMenu.Controls.Add(Panel1)
         PanelMenu.Controls.Add(btnLogout)
         PanelMenu.Controls.Add(btnAddVuelo)
@@ -112,6 +114,26 @@ Partial Class FormPrincipal
         PanelMenu.Size = New Size(227, 741)
         PanelMenu.TabIndex = 1
         ' 
+        ' btnAddAerolinea
+        ' 
+        btnAddAerolinea.FlatAppearance.BorderSize = 0
+        btnAddAerolinea.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(33), CByte(50), CByte(70))
+        btnAddAerolinea.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(12), CByte(61), CByte(92))
+        btnAddAerolinea.FlatStyle = FlatStyle.Flat
+        btnAddAerolinea.Font = New Font("Ebrima", 9.980198F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAddAerolinea.ForeColor = Color.Gainsboro
+        btnAddAerolinea.Image = CType(resources.GetObject("btnAddAerolinea.Image"), Image)
+        btnAddAerolinea.ImageAlign = ContentAlignment.MiddleLeft
+        btnAddAerolinea.Location = New Point(0, 410)
+        btnAddAerolinea.Margin = New Padding(2)
+        btnAddAerolinea.Name = "btnAddAerolinea"
+        btnAddAerolinea.Size = New Size(225, 51)
+        btnAddAerolinea.TabIndex = 12
+        btnAddAerolinea.Text = " Agregar Aerolinea"
+        btnAddAerolinea.TextAlign = ContentAlignment.MiddleRight
+        btnAddAerolinea.TextImageRelation = TextImageRelation.ImageBeforeText
+        btnAddAerolinea.UseVisualStyleBackColor = True
+        ' 
         ' Panel1
         ' 
         Panel1.Controls.Add(linkEditarPerfil)
@@ -124,6 +146,17 @@ Partial Class FormPrincipal
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(227, 122)
         Panel1.TabIndex = 11
+        ' 
+        ' linkEditarPerfil
+        ' 
+        linkEditarPerfil.AutoSize = True
+        linkEditarPerfil.LinkColor = Color.Gainsboro
+        linkEditarPerfil.Location = New Point(3, 107)
+        linkEditarPerfil.Name = "linkEditarPerfil"
+        linkEditarPerfil.Size = New Size(84, 15)
+        linkEditarPerfil.TabIndex = 7
+        linkEditarPerfil.TabStop = True
+        linkEditarPerfil.Text = "Editar mi perfil"
         ' 
         ' lblemail
         ' 
@@ -377,17 +410,6 @@ Partial Class FormPrincipal
         btnCerrar.TabIndex = 0
         btnCerrar.TabStop = False
         ' 
-        ' linkEditarPerfil
-        ' 
-        linkEditarPerfil.AutoSize = True
-        linkEditarPerfil.LinkColor = Color.Gainsboro
-        linkEditarPerfil.Location = New Point(3, 107)
-        linkEditarPerfil.Name = "linkEditarPerfil"
-        linkEditarPerfil.Size = New Size(84, 15)
-        linkEditarPerfil.TabIndex = 7
-        linkEditarPerfil.TabStop = True
-        linkEditarPerfil.Text = "Editar mi perfil"
-        ' 
         ' FormPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -439,4 +461,5 @@ Partial Class FormPrincipal
     Friend WithEvents lblIdentificacion As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents linkEditarPerfil As LinkLabel
+    Friend WithEvents btnAddAerolinea As Button
 End Class
