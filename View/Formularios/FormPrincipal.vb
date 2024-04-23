@@ -126,28 +126,47 @@ Public Class FormPrincipal
         AbrirFormEnPanel(Of Ventanilla)()
         btnVentanilla.BackColor = Color.FromArgb(12, 61, 92)
     End Sub
+    Private Sub btnAddAerolinea_Click(sender As Object, e As EventArgs) Handles btnAddAerolinea.Click
+        AbrirFormEnPanel(Of NuevaAerolinea)()
+        btnAddAerolinea.BackColor = Color.FromArgb(12, 61, 92)
+    End Sub
 
-    Private Sub btnReporte_click(sender As Object, e As EventArgs)
-        AbrirFormEnPanel(Of Reporte)()
+    Private Sub btnAddVuelo_Click(sender As Object, e As EventArgs) Handles btnAddVuelo.Click
+        AbrirFormEnPanel(Of AgregarVuelo)()
+        btnAddVuelo.BackColor = Color.FromArgb(12, 61, 92)
+    End Sub
+
+    Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click
+        AbrirFormEnPanel(Of AgregarAvion)()
+        btnAddPlane.BackColor = Color.FromArgb(12, 61, 92)
+    End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        AbrirFormEnPanel(Of ReportesG)()
         btnReporte.BackColor = Color.FromArgb(12, 61, 92)
     End Sub
+
+
     'METODO/EVENTO AL CERRAR FORMS
     Private Sub CerrarFormulario(ByVal sender As Object, ByVal e As FormClosedEventArgs)
         'CONDICION SI FORMS ESTA ABIERTO
-        If (Application.OpenForms("Form1") Is Nothing) Then
+        If (Application.OpenForms("Usuarios") Is Nothing) Then
             btnUsuarios.BackColor = Color.FromArgb(4, 41, 68)
         End If
-        If (Application.OpenForms("Form2") Is Nothing) Then
+        If (Application.OpenForms("Ventanilla") Is Nothing) Then
             btnVentanilla.BackColor = Color.FromArgb(4, 41, 68)
         End If
-        If (Application.OpenForms("Form3") Is Nothing) Then
+        If (Application.OpenForms("Reportes") Is Nothing) Then
             btnReporte.BackColor = Color.FromArgb(4, 41, 68)
         End If
-        If (Application.OpenForms("Form3") Is Nothing) Then
-            btnReporte.BackColor = Color.FromArgb(4, 41, 68)
+        If (Application.OpenForms("AgregarAvion") Is Nothing) Then
+            btnAddPlane.BackColor = Color.FromArgb(4, 41, 68)
         End If
-        If (Application.OpenForms("Form3") Is Nothing) Then
-            btnReporte.BackColor = Color.FromArgb(4, 41, 68)
+        If (Application.OpenForms("AgregarVuelo") Is Nothing) Then
+            btnAddVuelo.BackColor = Color.FromArgb(4, 41, 68)
+        End If
+        If (Application.OpenForms("NuevaAerolinea") Is Nothing) Then
+            btnAddAerolinea.BackColor = Color.FromArgb(4, 41, 68)
         End If
     End Sub
 
@@ -183,16 +202,6 @@ Public Class FormPrincipal
 
     End Sub
 
-    Private Sub btnAddAerolinea_Click(sender As Object, e As EventArgs) Handles btnAddAerolinea.Click
-        AbrirFormEnPanel(Of NuevaAerolinea)()
-    End Sub
 
-    Private Sub btnAddVuelo_Click(sender As Object, e As EventArgs) Handles btnAddVuelo.Click
-        AbrirFormEnPanel(Of AgregarVuelo)()
-    End Sub
-
-    Private Sub btnAddPlane_Click(sender As Object, e As EventArgs) Handles btnAddPlane.Click
-        AbrirFormEnPanel(Of AgregarAvion)()
-    End Sub
 End Class
 '#3D73FF

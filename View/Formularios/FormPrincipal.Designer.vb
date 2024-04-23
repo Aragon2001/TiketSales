@@ -27,6 +27,7 @@ Partial Class FormPrincipal
         PanelFormularios = New Panel()
         LOGO = New PictureBox()
         PanelMenu = New Panel()
+        btnReporte = New Button()
         btnAddAerolinea = New Button()
         Panel1 = New Panel()
         linkEditarPerfil = New LinkLabel()
@@ -38,7 +39,6 @@ Partial Class FormPrincipal
         btnLogout = New Button()
         btnAddVuelo = New Button()
         btnAddPlane = New Button()
-        btnReporte = New Button()
         btnVentanilla = New Button()
         btnUsuarios = New Button()
         PanelBarraTitulo = New Panel()
@@ -99,12 +99,12 @@ Partial Class FormPrincipal
         ' PanelMenu
         ' 
         PanelMenu.BackColor = Color.FromArgb(CByte(4), CByte(41), CByte(68))
+        PanelMenu.Controls.Add(btnReporte)
         PanelMenu.Controls.Add(btnAddAerolinea)
         PanelMenu.Controls.Add(Panel1)
         PanelMenu.Controls.Add(btnLogout)
         PanelMenu.Controls.Add(btnAddVuelo)
         PanelMenu.Controls.Add(btnAddPlane)
-        PanelMenu.Controls.Add(btnReporte)
         PanelMenu.Controls.Add(btnVentanilla)
         PanelMenu.Controls.Add(btnUsuarios)
         PanelMenu.Dock = DockStyle.Left
@@ -113,6 +113,26 @@ Partial Class FormPrincipal
         PanelMenu.Name = "PanelMenu"
         PanelMenu.Size = New Size(227, 741)
         PanelMenu.TabIndex = 1
+        ' 
+        ' btnReporte
+        ' 
+        btnReporte.FlatAppearance.BorderSize = 0
+        btnReporte.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(33), CByte(50), CByte(70))
+        btnReporte.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(12), CByte(61), CByte(92))
+        btnReporte.FlatStyle = FlatStyle.Flat
+        btnReporte.Font = New Font("Ebrima", 9.980198F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReporte.ForeColor = Color.Gainsboro
+        btnReporte.Image = CType(resources.GetObject("btnReporte.Image"), Image)
+        btnReporte.ImageAlign = ContentAlignment.MiddleLeft
+        btnReporte.Location = New Point(3, 186)
+        btnReporte.Margin = New Padding(2)
+        btnReporte.Name = "btnReporte"
+        btnReporte.Size = New Size(225, 51)
+        btnReporte.TabIndex = 13
+        btnReporte.Text = "Reportes"
+        btnReporte.TextAlign = ContentAlignment.MiddleRight
+        btnReporte.TextImageRelation = TextImageRelation.ImageBeforeText
+        btnReporte.UseVisualStyleBackColor = True
         ' 
         ' btnAddAerolinea
         ' 
@@ -275,26 +295,6 @@ Partial Class FormPrincipal
         btnAddPlane.TextImageRelation = TextImageRelation.ImageBeforeText
         btnAddPlane.UseVisualStyleBackColor = True
         ' 
-        ' btnReporte
-        ' 
-        btnReporte.FlatAppearance.BorderSize = 0
-        btnReporte.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(33), CByte(50), CByte(70))
-        btnReporte.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(12), CByte(61), CByte(92))
-        btnReporte.FlatStyle = FlatStyle.Flat
-        btnReporte.Font = New Font("Ebrima", 9.980198F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnReporte.ForeColor = Color.Gainsboro
-        btnReporte.Image = CType(resources.GetObject("btnReporte.Image"), Image)
-        btnReporte.ImageAlign = ContentAlignment.MiddleLeft
-        btnReporte.Location = New Point(2, 187)
-        btnReporte.Margin = New Padding(2)
-        btnReporte.Name = "btnReporte"
-        btnReporte.Size = New Size(225, 53)
-        btnReporte.TabIndex = 7
-        btnReporte.Text = "    Reportes"
-        btnReporte.TextAlign = ContentAlignment.MiddleRight
-        btnReporte.TextImageRelation = TextImageRelation.ImageBeforeText
-        btnReporte.UseVisualStyleBackColor = True
-        ' 
         ' btnVentanilla
         ' 
         btnVentanilla.FlatAppearance.BorderSize = 0
@@ -412,7 +412,7 @@ Partial Class FormPrincipal
         ' 
         ' FormPrincipal
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1539, 778)
         Controls.Add(PanelContenedor)
@@ -450,7 +450,6 @@ Partial Class FormPrincipal
     Friend WithEvents btnUsuarios As Button
     Friend WithEvents lblUsuarioActivo As Label
     Friend WithEvents lblUser As Label
-    Friend WithEvents btnReporte As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents LOGO As PictureBox
     Friend WithEvents btnAddVuelo As Button
@@ -462,4 +461,5 @@ Partial Class FormPrincipal
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents linkEditarPerfil As LinkLabel
     Friend WithEvents btnAddAerolinea As Button
+    Friend WithEvents btnReporte As Button
 End Class

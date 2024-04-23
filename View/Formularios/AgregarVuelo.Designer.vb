@@ -54,7 +54,7 @@ Partial Class AgregarVuelo
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(1201, 14)
+        Button2.Location = New Point(788, 20)
         Button2.Margin = New Padding(5)
         Button2.Name = "Button2"
         Button2.Size = New Size(117, 54)
@@ -81,7 +81,7 @@ Partial Class AgregarVuelo
         GroupBox1.Margin = New Padding(5)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(5)
-        GroupBox1.Size = New Size(1298, 365)
+        GroupBox1.Size = New Size(953, 604)
         GroupBox1.TabIndex = 22
         GroupBox1.TabStop = False
         ' 
@@ -89,7 +89,7 @@ Partial Class AgregarVuelo
         ' 
         ComboBoxIDAvion.FormattingEnabled = True
         ComboBoxIDAvion.Items.AddRange(New Object() {1, 2})
-        ComboBoxIDAvion.Location = New Point(886, 100)
+        ComboBoxIDAvion.Location = New Point(221, 309)
         ComboBoxIDAvion.Margin = New Padding(5, 3, 5, 3)
         ComboBoxIDAvion.Name = "ComboBoxIDAvion"
         ComboBoxIDAvion.Size = New Size(319, 23)
@@ -99,7 +99,7 @@ Partial Class AgregarVuelo
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(698, 105)
+        Label3.Location = New Point(33, 314)
         Label3.Margin = New Padding(5, 0, 5, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(153, 16)
@@ -178,7 +178,7 @@ Partial Class AgregarVuelo
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(24, 288)
+        Button1.Location = New Point(33, 534)
         Button1.Margin = New Padding(5)
         Button1.Name = "Button1"
         Button1.Size = New Size(167, 39)
@@ -188,7 +188,7 @@ Partial Class AgregarVuelo
         ' 
         ' TextBoxPrecio
         ' 
-        TextBoxPrecio.Location = New Point(886, 47)
+        TextBoxPrecio.Location = New Point(221, 256)
         TextBoxPrecio.Margin = New Padding(5)
         TextBoxPrecio.Name = "TextBoxPrecio"
         TextBoxPrecio.Size = New Size(319, 23)
@@ -209,7 +209,7 @@ Partial Class AgregarVuelo
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(698, 49)
+        Label5.Location = New Point(33, 258)
         Label5.Margin = New Padding(5, 0, 5, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(178, 16)
@@ -220,7 +220,7 @@ Partial Class AgregarVuelo
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1332, 471)
+        ClientSize = New Size(1138, 736)
         Controls.Add(Label6)
         Controls.Add(Button2)
         Controls.Add(GroupBox1)

@@ -121,7 +121,7 @@ Partial Class NuevaAerolinea
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(746, 466)
+        ClientSize = New Size(1138, 736)
         Controls.Add(Label6)
         Controls.Add(ButtonCerrar)
         Controls.Add(GroupBox1)

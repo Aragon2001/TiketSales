@@ -63,9 +63,6 @@
     <Compile Update="Formularios\NuevoAvion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\Reporte.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Formularios\Usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
