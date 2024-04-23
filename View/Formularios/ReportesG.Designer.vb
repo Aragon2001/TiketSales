@@ -28,8 +28,14 @@ Partial Class ReportesG
         BtnPasajerosBajados = New Button()
         BtnPasajerosLlegaronDestino = New Button()
         DataGridView1 = New DataGridView()
-        ComboBox1 = New ComboBox()
+        cbVuelo = New ComboBox()
         Label1 = New Label()
+        Label2 = New Label()
+        cbVentanilla = New ComboBox()
+        Label3 = New Label()
+        cbEscala = New ComboBox()
+        Label4 = New Label()
+        cbDestino = New ComboBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -94,31 +100,91 @@ Partial Class ReportesG
         DataGridView1.Size = New Size(1114, 477)
         DataGridView1.TabIndex = 5
         ' 
-        ' ComboBox1
+        ' cbVuelo
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"1", "2"})
-        ComboBox1.Location = New Point(82, 114)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(121, 23)
-        ComboBox1.TabIndex = 6
+        cbVuelo.FormattingEnabled = True
+        cbVuelo.Items.AddRange(New Object() {"1", "2"})
+        cbVuelo.Location = New Point(161, 114)
+        cbVuelo.Name = "cbVuelo"
+        cbVuelo.Size = New Size(121, 23)
+        cbVuelo.TabIndex = 6
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Location = New Point(19, 114)
         Label1.Name = "Label1"
-        Label1.Size = New Size(41, 15)
+        Label1.Size = New Size(100, 15)
         Label1.TabIndex = 7
-        Label1.Text = "Label1"
+        Label1.Text = "Numero de Vuelo"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(19, 168)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(121, 15)
+        Label2.TabIndex = 8
+        Label2.Text = "Numero de ventanilla"
+        ' 
+        ' cbVentanilla
+        ' 
+        cbVentanilla.FormattingEnabled = True
+        cbVentanilla.Items.AddRange(New Object() {"1", "2"})
+        cbVentanilla.Location = New Point(161, 165)
+        cbVentanilla.Name = "cbVentanilla"
+        cbVentanilla.Size = New Size(121, 23)
+        cbVentanilla.TabIndex = 9
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(369, 117)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(58, 15)
+        Label3.TabIndex = 11
+        Label3.Text = "Escala en:"
+        ' 
+        ' cbEscala
+        ' 
+        cbEscala.FormattingEnabled = True
+        cbEscala.Items.AddRange(New Object() {"1", "2"})
+        cbEscala.Location = New Point(511, 117)
+        cbEscala.Name = "cbEscala"
+        cbEscala.Size = New Size(121, 23)
+        cbEscala.TabIndex = 10
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(369, 165)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(50, 15)
+        Label4.TabIndex = 13
+        Label4.Text = "Destino:"
+        ' 
+        ' cbDestino
+        ' 
+        cbDestino.FormattingEnabled = True
+        cbDestino.Items.AddRange(New Object() {"1", "2"})
+        cbDestino.Location = New Point(511, 165)
+        cbDestino.Name = "cbDestino"
+        cbDestino.Size = New Size(121, 23)
+        cbDestino.TabIndex = 12
         ' 
         ' ReportesG
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1138, 736)
+        Controls.Add(Label4)
+        Controls.Add(cbDestino)
+        Controls.Add(Label3)
+        Controls.Add(cbEscala)
+        Controls.Add(cbVentanilla)
+        Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(ComboBox1)
+        Controls.Add(cbVuelo)
         Controls.Add(DataGridView1)
         Controls.Add(BtnPasajerosLlegaronDestino)
         Controls.Add(BtnPasajerosBajados)
@@ -140,6 +206,12 @@ Partial Class ReportesG
     Friend WithEvents BtnPasajerosBajados As Button
     Friend WithEvents BtnPasajerosLlegaronDestino As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbVuelo As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbVentanilla As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cbEscala As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents cbDestino As ComboBox
 End Class
