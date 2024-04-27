@@ -54,7 +54,7 @@ Partial Class AgregarAvion
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(14, 48)
+        Label6.Location = New Point(39, 14)
         Label6.Margin = New Padding(5, 0, 5, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(258, 23)
@@ -63,17 +63,19 @@ Partial Class AgregarAvion
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(845, 17)
+        Button2.Location = New Point(289, 573)
         Button2.Margin = New Padding(5)
         Button2.Name = "Button2"
-        Button2.Size = New Size(117, 54)
+        Button2.Size = New Size(117, 39)
         Button2.TabIndex = 20
         Button2.Text = "Regresar"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(Label11)
+        GroupBox1.Controls.Add(Button2)
         GroupBox1.Controls.Add(TextBoxCiudadesEscala)
         GroupBox1.Controls.Add(RadioButtonNoEscala)
         GroupBox1.Controls.Add(RadioButtonSiEscala)
@@ -95,11 +97,11 @@ Partial Class AgregarAvion
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(TextBoxnombre_piloto)
         GroupBox1.Controls.Add(Label5)
-        GroupBox1.Location = New Point(19, 92)
+        GroupBox1.Location = New Point(14, 14)
         GroupBox1.Margin = New Padding(5)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(5)
-        GroupBox1.Size = New Size(1018, 644)
+        GroupBox1.Size = New Size(1110, 644)
         GroupBox1.TabIndex = 19
         GroupBox1.TabStop = False
         ' 
@@ -107,7 +109,7 @@ Partial Class AgregarAvion
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(632, 260)
+        Label11.Location = New Point(26, 265)
         Label11.Margin = New Padding(5, 0, 5, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(136, 16)
@@ -116,7 +118,7 @@ Partial Class AgregarAvion
         ' 
         ' TextBoxCiudadesEscala
         ' 
-        TextBoxCiudadesEscala.Location = New Point(540, 288)
+        TextBoxCiudadesEscala.Location = New Point(298, 263)
         TextBoxCiudadesEscala.Margin = New Padding(5)
         TextBoxCiudadesEscala.Name = "TextBoxCiudadesEscala"
         TextBoxCiudadesEscala.Size = New Size(322, 23)
@@ -126,7 +128,7 @@ Partial Class AgregarAvion
         ' 
         RadioButtonNoEscala.AutoSize = True
         RadioButtonNoEscala.Font = New Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButtonNoEscala.Location = New Point(381, 301)
+        RadioButtonNoEscala.Location = New Point(786, 270)
         RadioButtonNoEscala.Name = "RadioButtonNoEscala"
         RadioButtonNoEscala.Size = New Size(41, 19)
         RadioButtonNoEscala.TabIndex = 22
@@ -138,7 +140,7 @@ Partial Class AgregarAvion
         ' 
         RadioButtonSiEscala.AutoSize = True
         RadioButtonSiEscala.Font = New Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButtonSiEscala.Location = New Point(339, 301)
+        RadioButtonSiEscala.Location = New Point(744, 270)
         RadioButtonSiEscala.Name = "RadioButtonSiEscala"
         RadioButtonSiEscala.Size = New Size(36, 19)
         RadioButtonSiEscala.TabIndex = 21
@@ -150,7 +152,7 @@ Partial Class AgregarAvion
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(285, 301)
+        Label10.Location = New Point(690, 270)
         Label10.Margin = New Padding(5, 0, 5, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(46, 16)
@@ -200,7 +202,7 @@ Partial Class AgregarAvion
         ' 
         ' TextBoxCiudadDestino
         ' 
-        TextBoxCiudadDestino.Location = New Point(285, 577)
+        TextBoxCiudadDestino.Location = New Point(298, 511)
         TextBoxCiudadDestino.Margin = New Padding(4, 3, 4, 3)
         TextBoxCiudadDestino.Name = "TextBoxCiudadDestino"
         TextBoxCiudadDestino.Size = New Size(319, 23)
@@ -210,7 +212,7 @@ Partial Class AgregarAvion
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(26, 581)
+        Label7.Location = New Point(39, 515)
         Label7.Margin = New Padding(6, 0, 6, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(187, 16)
@@ -219,7 +221,7 @@ Partial Class AgregarAvion
         ' 
         ' TextBoxCiudadOrigen
         ' 
-        TextBoxCiudadOrigen.Location = New Point(285, 523)
+        TextBoxCiudadOrigen.Location = New Point(298, 457)
         TextBoxCiudadOrigen.Margin = New Padding(4, 3, 4, 3)
         TextBoxCiudadOrigen.Name = "TextBoxCiudadOrigen"
         TextBoxCiudadOrigen.Size = New Size(319, 23)
@@ -229,7 +231,7 @@ Partial Class AgregarAvion
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(26, 532)
+        Label1.Location = New Point(39, 466)
         Label1.Margin = New Padding(6, 0, 6, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(181, 16)
@@ -248,7 +250,7 @@ Partial Class AgregarAvion
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(24, 288)
+        Button1.Location = New Point(31, 573)
         Button1.Margin = New Padding(5)
         Button1.Name = "Button1"
         Button1.Size = New Size(167, 39)
@@ -258,7 +260,7 @@ Partial Class AgregarAvion
         ' 
         ' TextBoxmarca
         ' 
-        TextBoxmarca.Location = New Point(285, 386)
+        TextBoxmarca.Location = New Point(298, 320)
         TextBoxmarca.Margin = New Padding(5)
         TextBoxmarca.Name = "TextBoxmarca"
         TextBoxmarca.Size = New Size(319, 23)
@@ -288,7 +290,7 @@ Partial Class AgregarAvion
         ' 
         ' TextBoxcapacidad
         ' 
-        TextBoxcapacidad.Location = New Point(285, 446)
+        TextBoxcapacidad.Location = New Point(298, 380)
         TextBoxcapacidad.Margin = New Padding(5)
         TextBoxcapacidad.Name = "TextBoxcapacidad"
         TextBoxcapacidad.ReadOnly = True
@@ -300,7 +302,7 @@ Partial Class AgregarAvion
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(26, 453)
+        Label4.Location = New Point(39, 387)
         Label4.Margin = New Padding(5, 0, 5, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(198, 16)
@@ -319,7 +321,7 @@ Partial Class AgregarAvion
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(26, 388)
+        Label5.Location = New Point(39, 322)
         Label5.Margin = New Padding(5, 0, 5, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(174, 16)
@@ -331,15 +333,12 @@ Partial Class AgregarAvion
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1138, 736)
-        Controls.Add(Label6)
-        Controls.Add(Button2)
         Controls.Add(GroupBox1)
         Name = "AgregarAvion"
         Text = "AgregarAvion"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Label6 As Label

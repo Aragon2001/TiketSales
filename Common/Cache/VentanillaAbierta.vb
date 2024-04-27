@@ -8,8 +8,22 @@
     Public NumeroVentanilla
     Public nombrePasajero
     Public nacionalidadPasajero
+    Public apellido1
+    Public apellido2
+
     Public destino
     Public passport
+
     Public idVuelo
+    Public NumeroAsiento
+    Public HoraSalida
+    Public Escala
+    Public LugarEscala
+    Public FechaSalida
+    Public HoraLlegada
+    Public Origen
+    Public PrecioTiquete
+    Public CiudadOrigen
+    Public idAvion
 
 End Module

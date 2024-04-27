@@ -123,7 +123,7 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub btnVentanilla_Click(sender As Object, e As EventArgs) Handles btnVentanilla.Click
-        AbrirFormEnPanel(Of Ventanilla)()
+        AbrirFormEnPanel(Of cbAsiento)()
         btnVentanilla.BackColor = Color.FromArgb(12, 61, 92)
     End Sub
     Private Sub btnAddAerolinea_Click(sender As Object, e As EventArgs) Handles btnAddAerolinea.Click

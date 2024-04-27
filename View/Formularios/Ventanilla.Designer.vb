@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Ventanilla
+Partial Class cbAsiento
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,12 +22,13 @@ Partial Class Ventanilla
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         PictureBox1 = New PictureBox()
         GroupBox1 = New GroupBox()
-        DateTimeVentanilla = New DateTimePicker()
+        lblFechaHora = New Label()
+        txtLA = New TextBox()
         Label4 = New Label()
         BtnNuevaVentanilla = New Button()
-        ComboBoxLinea_Aereas = New ComboBox()
         TextBoxCedula_Empl = New TextBox()
         BtnConfirmarVentanilla = New Button()
         TextBoxNombre_Emple = New TextBox()
@@ -37,13 +38,13 @@ Partial Class Ventanilla
         Label1 = New Label()
         ComboBoxID_Ventanilla = New ComboBox()
         GroupBoxOrigen = New GroupBox()
-        ComboBoxNumeroDeAsiento = New NumericUpDown()
+        DTFechaSalida = New DateTimePicker()
+        cbAsientos = New ComboBox()
         escalaNo = New RadioButton()
         TextBoxHoraSalida = New TextBox()
         escalaSi = New RadioButton()
         TextBoxNumVentanilla = New TextBox()
         TextBoxEscala = New TextBox()
-        TextBoxFechaSalida = New TextBox()
         TextBoxHoraLlegada = New TextBox()
         TextBoxOrigen = New TextBox()
         Label21 = New Label()
@@ -63,7 +64,7 @@ Partial Class Ventanilla
         Label8 = New Label()
         ButtonBorrarP = New Button()
         TextBoxNacionalidad = New TextBox()
-        ComboBoxDestino = New ComboBox()
+        cbDestinos = New ComboBox()
         TextBoxNombrePasajero = New TextBox()
         Label7 = New Label()
         Label11 = New Label()
@@ -72,10 +73,10 @@ Partial Class Ventanilla
         Label6 = New Label()
         BtnConfirmarCompra = New Button()
         btn_VolverMenu = New Button()
+        TimerActualizarHora = New Timer(components)
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         GroupBoxOrigen.SuspendLayout()
-        CType(ComboBoxNumeroDeAsiento, ComponentModel.ISupportInitialize).BeginInit()
         GroupBoxPasajero.SuspendLayout()
         SuspendLayout()
         ' 
@@ -90,11 +91,11 @@ Partial Class Ventanilla
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(lblFechaHora)
+        GroupBox1.Controls.Add(txtLA)
         GroupBox1.Controls.Add(PictureBox1)
-        GroupBox1.Controls.Add(DateTimeVentanilla)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(BtnNuevaVentanilla)
-        GroupBox1.Controls.Add(ComboBoxLinea_Aereas)
         GroupBox1.Controls.Add(TextBoxCedula_Empl)
         GroupBox1.Controls.Add(BtnConfirmarVentanilla)
         GroupBox1.Controls.Add(TextBoxNombre_Emple)
@@ -110,13 +111,25 @@ Partial Class Ventanilla
         GroupBox1.TabStop = False
         GroupBox1.Text = "Ingreso de ventanillas"
         ' 
-        ' DateTimeVentanilla
+        ' lblFechaHora
         ' 
-        DateTimeVentanilla.Enabled = False
-        DateTimeVentanilla.Location = New Point(97, 230)
-        DateTimeVentanilla.Name = "DateTimeVentanilla"
-        DateTimeVentanilla.Size = New Size(351, 26)
-        DateTimeVentanilla.TabIndex = 31
+        lblFechaHora.AutoSize = True
+        lblFechaHora.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblFechaHora.Location = New Point(177, 235)
+        lblFechaHora.Name = "lblFechaHora"
+        lblFechaHora.Size = New Size(0, 17)
+        lblFechaHora.TabIndex = 43
+        ' 
+        ' txtLA
+        ' 
+        txtLA.BackColor = Color.Silver
+        txtLA.Enabled = False
+        txtLA.ForeColor = Color.Gainsboro
+        txtLA.Location = New Point(177, 188)
+        txtLA.Name = "txtLA"
+        txtLA.ReadOnly = True
+        txtLA.Size = New Size(271, 26)
+        txtLA.TabIndex = 42
         ' 
         ' Label4
         ' 
@@ -142,18 +155,10 @@ Partial Class Ventanilla
         BtnNuevaVentanilla.Text = "Cambiar Ventanilla "
         BtnNuevaVentanilla.UseVisualStyleBackColor = False
         ' 
-        ' ComboBoxLinea_Aereas
-        ' 
-        ComboBoxLinea_Aereas.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        ComboBoxLinea_Aereas.FormattingEnabled = True
-        ComboBoxLinea_Aereas.Location = New Point(177, 184)
-        ComboBoxLinea_Aereas.Name = "ComboBoxLinea_Aereas"
-        ComboBoxLinea_Aereas.Size = New Size(271, 25)
-        ComboBoxLinea_Aereas.TabIndex = 21
-        ' 
         ' TextBoxCedula_Empl
         ' 
         TextBoxCedula_Empl.BackColor = Color.Silver
+        TextBoxCedula_Empl.Enabled = False
         TextBoxCedula_Empl.ForeColor = Color.Gainsboro
         TextBoxCedula_Empl.Location = New Point(177, 142)
         TextBoxCedula_Empl.Name = "TextBoxCedula_Empl"
@@ -179,9 +184,11 @@ Partial Class Ventanilla
         ' TextBoxNombre_Emple
         ' 
         TextBoxNombre_Emple.BackColor = Color.Silver
+        TextBoxNombre_Emple.Enabled = False
         TextBoxNombre_Emple.ForeColor = Color.Gainsboro
         TextBoxNombre_Emple.Location = New Point(177, 101)
         TextBoxNombre_Emple.Name = "TextBoxNombre_Emple"
+        TextBoxNombre_Emple.ReadOnly = True
         TextBoxNombre_Emple.Size = New Size(271, 26)
         TextBoxNombre_Emple.TabIndex = 18
         ' 
@@ -228,6 +235,7 @@ Partial Class Ventanilla
         ' ComboBoxID_Ventanilla
         ' 
         ComboBoxID_Ventanilla.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
+        ComboBoxID_Ventanilla.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBoxID_Ventanilla.Font = New Font("Ebrima", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ComboBoxID_Ventanilla.ForeColor = Color.Gainsboro
         ComboBoxID_Ventanilla.FormattingEnabled = True
@@ -239,13 +247,13 @@ Partial Class Ventanilla
         ' 
         ' GroupBoxOrigen
         ' 
-        GroupBoxOrigen.Controls.Add(ComboBoxNumeroDeAsiento)
+        GroupBoxOrigen.Controls.Add(DTFechaSalida)
+        GroupBoxOrigen.Controls.Add(cbAsientos)
         GroupBoxOrigen.Controls.Add(escalaNo)
         GroupBoxOrigen.Controls.Add(TextBoxHoraSalida)
         GroupBoxOrigen.Controls.Add(escalaSi)
         GroupBoxOrigen.Controls.Add(TextBoxNumVentanilla)
         GroupBoxOrigen.Controls.Add(TextBoxEscala)
-        GroupBoxOrigen.Controls.Add(TextBoxFechaSalida)
         GroupBoxOrigen.Controls.Add(TextBoxHoraLlegada)
         GroupBoxOrigen.Controls.Add(TextBoxOrigen)
         GroupBoxOrigen.Controls.Add(Label21)
@@ -267,16 +275,22 @@ Partial Class Ventanilla
         GroupBoxOrigen.TabStop = False
         GroupBoxOrigen.Text = "Vuelo"
         ' 
-        ' ComboBoxNumeroDeAsiento
+        ' DTFechaSalida
         ' 
-        ComboBoxNumeroDeAsiento.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        ComboBoxNumeroDeAsiento.Location = New Point(201, 361)
-        ComboBoxNumeroDeAsiento.Margin = New Padding(4)
-        ComboBoxNumeroDeAsiento.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
-        ComboBoxNumeroDeAsiento.Name = "ComboBoxNumeroDeAsiento"
-        ComboBoxNumeroDeAsiento.Size = New Size(284, 26)
-        ComboBoxNumeroDeAsiento.TabIndex = 33
-        ComboBoxNumeroDeAsiento.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        DTFechaSalida.Location = New Point(192, 269)
+        DTFechaSalida.Name = "DTFechaSalida"
+        DTFechaSalida.Size = New Size(289, 26)
+        DTFechaSalida.TabIndex = 43
+        ' 
+        ' cbAsientos
+        ' 
+        cbAsientos.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
+        cbAsientos.DropDownStyle = ComboBoxStyle.DropDownList
+        cbAsientos.FormattingEnabled = True
+        cbAsientos.Location = New Point(193, 353)
+        cbAsientos.Name = "cbAsientos"
+        cbAsientos.Size = New Size(288, 25)
+        cbAsientos.TabIndex = 42
         ' 
         ' escalaNo
         ' 
@@ -291,8 +305,9 @@ Partial Class Ventanilla
         ' 
         ' TextBoxHoraSalida
         ' 
+        TextBoxHoraSalida.AutoCompleteMode = AutoCompleteMode.Append
         TextBoxHoraSalida.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxHoraSalida.Location = New Point(193, 77)
+        TextBoxHoraSalida.Location = New Point(192, 68)
         TextBoxHoraSalida.Name = "TextBoxHoraSalida"
         TextBoxHoraSalida.ReadOnly = True
         TextBoxHoraSalida.Size = New Size(289, 26)
@@ -311,8 +326,9 @@ Partial Class Ventanilla
         ' 
         ' TextBoxNumVentanilla
         ' 
+        TextBoxNumVentanilla.AutoCompleteMode = AutoCompleteMode.Append
         TextBoxNumVentanilla.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxNumVentanilla.Location = New Point(193, 159)
+        TextBoxNumVentanilla.Location = New Point(193, 148)
         TextBoxNumVentanilla.Name = "TextBoxNumVentanilla"
         TextBoxNumVentanilla.ReadOnly = True
         TextBoxNumVentanilla.Size = New Size(288, 26)
@@ -320,26 +336,19 @@ Partial Class Ventanilla
         ' 
         ' TextBoxEscala
         ' 
+        TextBoxEscala.AutoCompleteMode = AutoCompleteMode.Append
         TextBoxEscala.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxEscala.Location = New Point(193, 197)
+        TextBoxEscala.Location = New Point(192, 194)
         TextBoxEscala.Name = "TextBoxEscala"
         TextBoxEscala.ReadOnly = True
         TextBoxEscala.Size = New Size(289, 26)
         TextBoxEscala.TabIndex = 20
         ' 
-        ' TextBoxFechaSalida
-        ' 
-        TextBoxFechaSalida.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxFechaSalida.Location = New Point(201, 276)
-        TextBoxFechaSalida.Name = "TextBoxFechaSalida"
-        TextBoxFechaSalida.ReadOnly = True
-        TextBoxFechaSalida.Size = New Size(284, 26)
-        TextBoxFechaSalida.TabIndex = 30
-        ' 
         ' TextBoxHoraLlegada
         ' 
+        TextBoxHoraLlegada.AutoCompleteMode = AutoCompleteMode.Append
         TextBoxHoraLlegada.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxHoraLlegada.Location = New Point(193, 118)
+        TextBoxHoraLlegada.Location = New Point(192, 109)
         TextBoxHoraLlegada.Name = "TextBoxHoraLlegada"
         TextBoxHoraLlegada.ReadOnly = True
         TextBoxHoraLlegada.Size = New Size(289, 26)
@@ -347,8 +356,9 @@ Partial Class Ventanilla
         ' 
         ' TextBoxOrigen
         ' 
+        TextBoxOrigen.AutoCompleteMode = AutoCompleteMode.Append
         TextBoxOrigen.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxOrigen.Location = New Point(129, 35)
+        TextBoxOrigen.Location = New Point(126, 26)
         TextBoxOrigen.Name = "TextBoxOrigen"
         TextBoxOrigen.ReadOnly = True
         TextBoxOrigen.Size = New Size(356, 26)
@@ -455,11 +465,12 @@ Partial Class Ventanilla
         ' 
         ' TextBoxPrecioTiquete
         ' 
+        TextBoxPrecioTiquete.AutoCompleteMode = AutoCompleteMode.Append
         TextBoxPrecioTiquete.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        TextBoxPrecioTiquete.Location = New Point(201, 235)
+        TextBoxPrecioTiquete.Location = New Point(192, 226)
         TextBoxPrecioTiquete.Name = "TextBoxPrecioTiquete"
         TextBoxPrecioTiquete.ReadOnly = True
-        TextBoxPrecioTiquete.Size = New Size(284, 26)
+        TextBoxPrecioTiquete.Size = New Size(290, 26)
         TextBoxPrecioTiquete.TabIndex = 19
         ' 
         ' GroupBoxPasajero
@@ -470,7 +481,7 @@ Partial Class Ventanilla
         GroupBoxPasajero.Controls.Add(Label8)
         GroupBoxPasajero.Controls.Add(ButtonBorrarP)
         GroupBoxPasajero.Controls.Add(TextBoxNacionalidad)
-        GroupBoxPasajero.Controls.Add(ComboBoxDestino)
+        GroupBoxPasajero.Controls.Add(cbDestinos)
         GroupBoxPasajero.Controls.Add(TextBoxNombrePasajero)
         GroupBoxPasajero.Controls.Add(Label7)
         GroupBoxPasajero.Controls.Add(Label11)
@@ -546,14 +557,15 @@ Partial Class Ventanilla
         TextBoxNacionalidad.Size = New Size(284, 26)
         TextBoxNacionalidad.TabIndex = 23
         ' 
-        ' ComboBoxDestino
+        ' cbDestinos
         ' 
-        ComboBoxDestino.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
-        ComboBoxDestino.FormattingEnabled = True
-        ComboBoxDestino.Location = New Point(202, 157)
-        ComboBoxDestino.Name = "ComboBoxDestino"
-        ComboBoxDestino.Size = New Size(284, 25)
-        ComboBoxDestino.TabIndex = 22
+        cbDestinos.BackColor = Color.FromArgb(CByte(80), CByte(96), CByte(130))
+        cbDestinos.DropDownStyle = ComboBoxStyle.DropDownList
+        cbDestinos.FormattingEnabled = True
+        cbDestinos.Location = New Point(202, 157)
+        cbDestinos.Name = "cbDestinos"
+        cbDestinos.Size = New Size(284, 25)
+        cbDestinos.TabIndex = 22
         ' 
         ' TextBoxNombrePasajero
         ' 
@@ -644,7 +656,7 @@ Partial Class Ventanilla
         btn_VolverMenu.Text = "Cerrar"
         btn_VolverMenu.UseVisualStyleBackColor = False
         ' 
-        ' Ventanilla
+        ' cbAsiento
         ' 
         AutoScaleDimensions = New SizeF(7F, 17F)
         AutoScaleMode = AutoScaleMode.Font
@@ -659,14 +671,13 @@ Partial Class Ventanilla
         Font = New Font("Ebrima", 10F)
         ForeColor = SystemColors.ActiveCaptionText
         Margin = New Padding(4)
-        Name = "Ventanilla"
+        Name = "cbAsiento"
         Text = "Ventanilla"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         GroupBoxOrigen.ResumeLayout(False)
         GroupBoxOrigen.PerformLayout()
-        CType(ComboBoxNumeroDeAsiento, ComponentModel.ISupportInitialize).EndInit()
         GroupBoxPasajero.ResumeLayout(False)
         GroupBoxPasajero.PerformLayout()
         ResumeLayout(False)
@@ -674,7 +685,6 @@ Partial Class Ventanilla
     End Sub
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DateTimeVentanilla As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBoxLinea_Aereas As ComboBox
     Friend WithEvents BtnConfirmarVentanilla As Button
@@ -697,17 +707,15 @@ Partial Class Ventanilla
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents GroupBoxPasajero As GroupBox
-    Friend WithEvents ComboBoxNumeroDeAsiento As NumericUpDown
     Friend WithEvents BtnConfirmarCompra As Button
     Friend WithEvents escalaNo As RadioButton
     Friend WithEvents escalaSi As RadioButton
-    Friend WithEvents TextBoxFechaSalida As TextBox
     Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents TextBoxNumeroDePasaporte As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBoxNacionalidad As TextBox
-    Friend WithEvents ComboBoxDestino As ComboBox
+    Friend WithEvents cbDestinos As ComboBox
     Friend WithEvents TextBoxPrecioTiquete As TextBox
     Friend WithEvents TextBoxNombrePasajero As TextBox
     Friend WithEvents Label7 As Label
@@ -722,4 +730,9 @@ Partial Class Ventanilla
     Friend WithEvents Label13 As Label
     Friend WithEvents txtapellido1 As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents cbAsientos As ComboBox
+    Friend WithEvents txtLA As TextBox
+    Friend WithEvents DTFechaSalida As DateTimePicker
+    Friend WithEvents lblFechaHora As Label
+    Friend WithEvents TimerActualizarHora As Timer
 End Class
